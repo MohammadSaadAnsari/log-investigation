@@ -13,8 +13,11 @@ git clone https://github.com/MohammadSaadAnsari/log-investigation (ek local copy
 cd log-investigation
 
 make a folder-              
-mkdir data (now after this, dataset paste krdo iss folder main)
+mkdir data 
+!!!!!!CLOSE TERMINAL NOW!!!!!! (usmain paste mt krdena csv file plss)
+
+(now after this, dataset(unzip krne ke baad jo csv file hai) paste krdo iss folder main)
 
 
 
-now you can start working on training.py or analysis.py
+now you can start working on training.py or analysis.py (file banayi nahi hain abhi)

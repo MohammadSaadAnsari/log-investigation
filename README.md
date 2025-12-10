@@ -7,10 +7,13 @@ https://www.kaggle.com/datasets/aryan208/cybersecurity-threat-detection-logs (jo
 
 Then:
 open git bash:
-write-                      git clone https://github.com/MohammadSaadAnsari/log-investigation (ek local copy mil gayi tmko github repo ki)
-                            cd log-investigation
 
-make a folder-              mkdir data (now after this, dataset paste krdo iss folder main)
+write-                      
+git clone https://github.com/MohammadSaadAnsari/log-investigation (ek local copy mil gayi tmko github repo ki)                            
+cd log-investigation
+
+make a folder-              
+mkdir data (now after this, dataset paste krdo iss folder main)
 
 
 

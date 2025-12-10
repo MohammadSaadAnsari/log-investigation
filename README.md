@@ -14,6 +14,7 @@ cd log-investigation
 
 make a folder-              
 mkdir data 
+
 !!!!!!CLOSE TERMINAL NOW!!!!!! (usmain paste mt krdena csv file plss)
 
 (now after this, dataset(unzip krne ke baad jo csv file hai) paste krdo iss folder main)

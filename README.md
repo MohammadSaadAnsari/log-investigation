@@ -22,3 +22,36 @@ mkdir data
 
 
 now you can start working on training.py or analysis.py (file banayi nahi hain abhi)
+
+
+
+Shreya:
+Step: Track changes with Git
+
+After making edits / adding files, do this in Git Bash:
+
+git status
+
+
+Shows what changed
+
+git add .
+
+
+Stages all changes
+
+git commit -m "Added data folder and initial analysis file"
+
+
+Saves changes locally
+
+Step: Push changes to GitHub (optional)
+
+You need write access to repo
+
+Then:
+
+git push
+
+
+This updates the GitHub repo with your changes

@@ -1,0 +1,12 @@
+# Ignore dataset folder
+/data/
+
+# Ignore downloaded archives
+*.zip
+
+# Python junk
+__pycache__/
+*.pyc
+
+# Environment files
+.env

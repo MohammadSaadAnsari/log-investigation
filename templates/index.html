@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Log Investigation Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>AI-Based Log Investigation Framework</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <label for="logfile">Upload Log File (CSV):</label>
+    <input type="file" id="logfile" name="logfile" accept=".csv" required>
+    <button type="submit">Analyze Logs</button>
+</form>
+
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+{% if results %}
+<h2>Investigation Results</h2>
+
+<table>
+    <tr>
+        <th>Timestamp</th>
+        <th>Source IP</th>
+        <th>Destination IP</th>
+        <th>Protocol</th>
+        <th>Action</th>
+        <th>Risk</th>
+        <th>Threat</th>
+        <th>Reason</th>
+    </tr>
+
+    {% for r in results %}
+    <tr class="{{ 'anomaly' if r.is_anomaly else '' }}">
+        <td>{{ r.timestamp }}</td>
+        <td>{{ r.source_ip }}</td>
+        <td>{{ r.dest_ip }}</td>
+        <td>{{ r.protocol }}</td>
+        <td>{{ r.action }}</td>
+        <td>{{ r.risk_score }}</td>
+        <td>{{ r.inferred_threat }}</td>
+        <td>{{ r.reason }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+</body>
+</html>

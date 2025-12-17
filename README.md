@@ -20,9 +20,7 @@ mkdir data
 (now after this, dataset(unzip krne ke baad jo csv file hai) paste krdo iss folder main)
 
 
-
-now you can start working on training.py or analysis.py (file banayi nahi hain abhi)
-
+now you can start working on training.py or analysis.py or app.py etc, in your branch. (try not to work directly on main, unless you are sure what you are editing is 100% correct)
 
 
 Shreya:
@@ -55,3 +53,4 @@ git push
 
 
 This updates the GitHub repo with your changes
+

@@ -8,12 +8,42 @@
 </head>
 <body>
 
-<h1>AI-Based Log Investigation Framework</h1>
+<h1>AI-Based Log Investigation Dashboard</h1>
 
 <form method="POST" enctype="multipart/form-data">
     <label for="logfile">Upload Log File (CSV):</label>
-    <input type="file" id="logfile" name="logfile" accept=".csv" required>
-    <button type="submit">Analyze Logs</button>
+    <input type="file" id="logfile" name="logfile" accept=".csv" title="Select a CSV log file to analyze">
+
+    <select name="source_ip" title="Filter logs by source IP address">
+        <option value="">All Source IPs</option>
+        {% for ip in ips %}
+        <option value="{{ ip }}">{{ ip }}</option>
+        {% endfor %}
+    </select>
+
+    <select name="protocol" title="Filter logs by protocol type">
+        <option value="">All Protocols</option>
+        {% for p in protocols %}
+        <option value="{{ p }}">{{ p }}</option>
+        {% endfor %}
+    </select>
+
+    <select name="inferred_threat" title="Filter logs by inferred threat type">
+        <option value="">All Threats</option>
+        {% for t in threats %}
+        <option value="{{ t }}">{{ t }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Analyze</button>
+</form>
+
+<form method="POST" action="/export/csv">
+    <button type="submit">Export CSV</button>
+</form>
+
+<form method="POST" action="/export/pdf">
+    <button type="submit">Export PDF Report</button>
 </form>
 
 {% if error %}
@@ -21,20 +51,17 @@
 {% endif %}
 
 {% if results %}
-<h2>Investigation Results</h2>
-
 <table>
     <tr>
-        <th>Timestamp</th>
-        <th>Source IP</th>
-        <th>Destination IP</th>
+        <th>Time</th>
+        <th>Source</th>
+        <th>Dest</th>
         <th>Protocol</th>
         <th>Action</th>
         <th>Risk</th>
         <th>Threat</th>
         <th>Reason</th>
     </tr>
-
     {% for r in results %}
     <tr class="{{ 'anomaly' if r.is_anomaly else '' }}">
         <td>{{ r.timestamp }}</td>

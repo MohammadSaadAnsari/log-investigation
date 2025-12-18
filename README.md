@@ -59,17 +59,26 @@ This updates the GitHub repo with your changes
 To simply run the project and view the website.
 
 1. Clone the repo (ignore if already done previously)
-git clone https://<link-to-repo>
+
+git clone https://https://github.com/MohammadSaadAnsari/log-investigation
+
 cd repo-name
+
 
 2. Create and activate a virtual environment
 python -m venv .venv
+
 .venv\Scripts\activate   # Windows
-or
+
+   or
+
 source .venv/bin/activate   # Mac/Linux
 
+
 3. Install dependencies
+   
 pip install -r requirements.txt
 
 4. Run the app
+   
 python app.py

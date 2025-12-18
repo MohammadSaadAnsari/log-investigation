@@ -10,3 +10,26 @@ __pycache__/
 
 # Environment files
 .env
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Build / distribution folders
+build/
+dist/
+*.egg-info/

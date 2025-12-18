@@ -54,3 +54,22 @@ git push
 
 This updates the GitHub repo with your changes
 
+
+SAAD: 18-12-25
+To simply run the project and view the website.
+
+# 1. Clone the repo (ignore if already done previously)
+git clone https://<link-to-repo>
+cd repo-name
+
+# 2. Create and activate a virtual environment
+python -m venv .venv
+.venv\Scripts\activate   # Windows
+# or
+source .venv/bin/activate   # Mac/Linux
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the app
+python app.py

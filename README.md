@@ -23,7 +23,7 @@ mkdir data
 now you can start working on training.py or analysis.py or app.py etc, in your branch. (try not to work directly on main, unless you are sure what you are editing is 100% correct)
 
 
-Shreya:
+#Shreya:
 Step: Track changes with Git
 
 After making edits / adding files, do this in Git Bash:
@@ -55,21 +55,21 @@ git push
 This updates the GitHub repo with your changes
 
 
-SAAD: 18-12-25
+#SAAD: 18-12-25
 To simply run the project and view the website.
 
-# 1. Clone the repo (ignore if already done previously)
+1. Clone the repo (ignore if already done previously)
 git clone https://<link-to-repo>
 cd repo-name
 
-# 2. Create and activate a virtual environment
+2. Create and activate a virtual environment
 python -m venv .venv
 .venv\Scripts\activate   # Windows
-# or
+or
 source .venv/bin/activate   # Mac/Linux
 
-# 3. Install dependencies
+3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Run the app
+4. Run the app
 python app.py
